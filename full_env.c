@@ -8,7 +8,7 @@
 
 void full_env(char *line)
 {
-	/*Pointer to the array of environment variables*/
+	/*Pointer to the arr of env variables*/
 	char **env = environ;
 	/*Loop through the array of environment variables*/
 	while (*env != NULL)
@@ -18,6 +18,6 @@ void full_env(char *line)
 		env++; /*Move to the next environment variable*/
 	}
 
-	/*Free the memory allocated for the input line*/
+	/*Free the memory for the input line*/
 	free(line);
 }
