@@ -1,13 +1,16 @@
 #include "main.h"
 
 /**
- * prompt_cmd - Function That prompt $ to the user
- * wating for write command. 
-*/
+ *prompt_cmd: Function that display a prompt "$ "
+ *to the user.
+ */
 void prompt_cmd(void)
 {
-    if (isatty(STDIN_FILENO) == 1)
-    {
-        write(STDOUT_FILENO, "$ ", 2);
-    }
+	if (isatty(STDIN_FILENO))
+	{
+		/*Flush any buffered input from the standard input*/
+		fflush(stdin);
+		/*Write the prompt "$ " to the standard output*/
+		write(STDOUT_FILENO, "$ ", 2);
+	}
 }
