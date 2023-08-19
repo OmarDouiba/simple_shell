@@ -43,12 +43,10 @@ char **split_path(char *p_name)
 				i++;
 				token = strtok(NULL, ":\n");
 			}
-			/*Mark the end of the array with a NULL pointer*/
 			path_arr[i] = NULL;
 		}
 		/*Return the dynamically allocated array of path strings*/
 		return (path_arr);
 	}
-	/*Return NULL if the input string is NULL*/
 	return (NULL);
 }
