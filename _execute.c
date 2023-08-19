@@ -1,13 +1,16 @@
 #include "main.h"
+
 /*
-* _execute -
-* @full:
-* @line_arr:
-* Return: Exit.
+ * _execute - Execute a command.
+ * @full: full path.
+ * @line_arr: array of line.
+ * Return: Exit stat.
 */
+
 int _execute(char *full, char **line_arr)
 {
-	int exec_stat = 0, exit_stat = 0, status;
+	int exec_stat = 0, exit_stat = 0;
+	int status;
 	pid_t pid;
 
 	/*Create a child process using fork*/
