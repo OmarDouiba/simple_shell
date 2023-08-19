@@ -1,12 +1,10 @@
 #include "main.h"
-
 /*
- * _execute - Execute a command.
- * @full: full path.
- * @line_arr: array of line.
- * Return: Exit stat.
-*/
-
+ *_execute - Execute a command.
+ *@full: Full path of the command.
+ *@line_arr: Array of arguments for the command.
+ *Return: Exit status of the executed command.
+ */
 int _execute(char *full, char **line_arr)
 {
 	int exec_stat = 0, exit_stat = 0;

@@ -1,8 +1,7 @@
 #include "main.h"
 
 /**
- *prompt_cmd: Function that display a prompt "$ "
- *to the user.
+ *prompt_cmd - Function that display a prompt "$ " to the user.
  */
 void prompt_cmd(void)
 {

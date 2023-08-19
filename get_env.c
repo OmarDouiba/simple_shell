@@ -1,7 +1,7 @@
 #include "main.h"
 
 /*
- *_getenv - Funtion that return the envirement
+ * *get_env - Funtion that return the envirement
  *@str: variable name.
  *Return: The path, otherise NULL.
  */
@@ -30,10 +30,10 @@ char *get_env(char *str)
 }
 
 /**
- *true_false -
- *@str:
- *@i:
- *Return:
+ *true_false - boolien function
+ *@str: string
+ *@i: int
+ *Return: bool
  */
 bool true_false(const char *str, int i)
 {
@@ -44,7 +44,6 @@ bool true_false(const char *str, int i)
 		if (environ[i][j] != str[j])
 		{
 			return (1);
-			break;
 		}
 		else
 			return (0);

@@ -2,6 +2,7 @@
 
 /**
  *print_str - Function that print string.
+ *@str: string
  *Return: string
  */
 int print_str(char *str)

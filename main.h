@@ -16,7 +16,7 @@
 /* Declare the global environment variable */
 extern char **environ;
 
-/* Function prototypes for the shell */ 
+/* Function prototypes for the shell */
 int _execute(char *full, char **line_arr);
 void funny_shell(void);
 

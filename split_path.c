@@ -9,8 +9,7 @@
 char **split_path(char *p_name)
 {
 	int i = 0, count = 0;
-	char *token = NULL;
-	char **path_arr = NULL;
+	char *token = NULL, **path_arr = NULL;
 
 	if (p_name != NULL)
 	{
@@ -25,7 +24,7 @@ char **split_path(char *p_name)
 		count++;
 		if (count != 0)
 		{ /*Allocate memory for the array of path strings*/
-			path_arr = malloc(sizeof(char*) *(count + 1));
+			path_arr = malloc(sizeof(char *) * (count + 1));
 			if (path_arr == NULL)
 			{
 				free(path_arr);

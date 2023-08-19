@@ -5,6 +5,7 @@
  *handling the SIGINT signal (Ctrl+C).
  *When SIGINT is received, a newline
  *and prompt symbol "$ " are printed.
+ * @sin: signal
  */
 void handle_signal(int sin)
 {
