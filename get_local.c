@@ -1,4 +1,4 @@
-#include "main.h"
+#include "shell.h"
 /**
  * *get_location - function is expected to take in the command that was
  * passed and return the path of that command
