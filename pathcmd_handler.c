@@ -8,7 +8,7 @@
 int pathcmd_handler(char **line_arr)
 {
 	struct stat st;
-	int exit_stat = 0;
+	int exit_stat = 127;
 
 	/*Check if line_arr is NULL or the first element is NULL*/
 	if (line_arr == NULL || line_arr[0] == NULL)
