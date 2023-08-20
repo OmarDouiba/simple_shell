@@ -12,6 +12,8 @@
 #include <fcntl.h>
 #include <errno.h>
 
+#define BUFFER_SIZE 1024
+
 extern char **environ;
 
 int _putchar(char c);
@@ -22,5 +24,6 @@ void execmd(char **argv);
 char *get_location(char *command);
 char *strdup(const char *s);
 int main(int ac, char **argv);
+char *own_getline();
 
 #endif

@@ -11,15 +11,39 @@
 void execmd(char **argv)
 {
 	char *command = NULL, *new_command = NULL;
+	pid_t pid, wpid;
+	int status;
 
 	if (argv)
 	{
 		command = argv[0];
 		new_command = get_location(command);
 
-		if (execve(new_command, argv, NULL) == -1)
+		if (actual_command)
 		{
-			perror("Error");
+			pid = fork();
+			if (pid == 0)
+			{
+				if (execve(actual_command, argv, NULL) == -1)
+				{
+					perror("Error");
+					exit(EXIT_FAILURE);
+				}
+			}
+			else if (pid < 0)
+			{
+				perror("fork error");
+			}
+			else
+			{
+				do {
+					wpid = waitpid(pid, &status, WUNTRACED);
+				} while (!WIFEXITED(status) && !WIFSIGNALED(status));
+			}
+		}
+		else
+		{
+			printf("Command not found: %s\n", command);
 		}
 	}
 }
