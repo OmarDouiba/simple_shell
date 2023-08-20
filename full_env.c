@@ -1,7 +1,7 @@
 #include "main.h"
 
-/*
- *env_fun - Function that prints the environment.
+/**
+ *full_env - Function that prints the environment.
  *@line: the line that user enter.
  *we need to free this line after the user use env.
  */

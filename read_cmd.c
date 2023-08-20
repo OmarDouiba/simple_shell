@@ -1,6 +1,6 @@
 #include "main.h"
-/*
- *read_cmdline - Funtion that read a line of input from the user using getline
+/**
+*read_cmdline - Funtion that read a line of input from the user using getline
  *@path_name: path name.
  *@path_arr: array of paths.
  *Return: line.

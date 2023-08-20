@@ -1,5 +1,5 @@
 #include "main.h"
-/*
+/**
  *_execute - Execute a command.
  *@full: Full path of the command.
  *@line_arr: Array of arguments for the command.

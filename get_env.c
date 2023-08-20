@@ -1,6 +1,6 @@
 #include "main.h"
 
-/*
+/**
  * *get_env - Funtion that return the envirement
  *@str: variable name.
  *Return: The path, otherise NULL.
