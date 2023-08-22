@@ -56,5 +56,5 @@ int main(int ac, char **argv)
 		free(lineptr_copy);
 	}
 	free(nchars_read);
-        return (0);
+	return (0);
 }
