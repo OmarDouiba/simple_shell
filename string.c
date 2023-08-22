@@ -75,7 +75,7 @@ char *_strcat(char *dest, char *src)
 /**
  * *strdup - function that duplicate string to new_string
  *
- * @*s: string duplicated
+ * @s: string duplicated
  *
  * Return: a pointer to a new string
  */
@@ -89,5 +89,5 @@ char *strdup(const char *s)
 	{
 		strcpy(new_str, s);
 	}
-	return new_str;
+	return (new_str);
 }
