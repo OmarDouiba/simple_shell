@@ -30,7 +30,8 @@ char *own_getline()
 		return (NULL);
 	}
 	buffer[index++] = '\0';
-	char *line = (char *) malloc(index - start_pos);
+	char *line;
+	line = (char *) malloc(index - start_pos);
 
 	if (line == NULL)
 	{
