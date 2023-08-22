@@ -2,7 +2,7 @@
 /**
  * execmd - fuction that handling the command execution
  *
- * @**argv: is an array of strings,where each string represents
+ * @argv: is an array of strings,where each string represents
  * an argument for the command that needs to be executed
  *
  * Return: void
