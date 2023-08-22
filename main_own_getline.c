@@ -48,9 +48,9 @@ int main(int ac, char **argv)
 		}
 		argv[i] = NULL;
 		execmd(argv);
-		for (j = 0, j < num_tokens; j++)
+		for (j = 0; j < num_tokens; j++)
 		{
-			free(arg[j]);
+			free(argv[j]);
 		}
 		free(argv);
 		free(lineptr_copy);
