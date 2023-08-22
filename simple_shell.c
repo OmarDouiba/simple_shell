@@ -7,7 +7,6 @@
  *
  * Return: 0
  */
-
 int main(int ac, char **argv)
 {
 	char *lineptr = NULL, *lineptr_copy = NULL;
@@ -29,7 +28,7 @@ int main(int ac, char **argv)
 		{
 			printf("end of file\n");
 			return (-1);
-        }
+		}
 		lineptr_copy = malloc(sizeof(char) * nchars_read);
 		if (lineptr_copy == NULL)
 		{
@@ -38,14 +37,12 @@ int main(int ac, char **argv)
 		}
 		strcpy(lineptr_copy, lineptr);
 		token = strtok(lineptr, delim);
-
 		while (token != NULL)
 		{
 			num_tokens++;
 			token = strtok(NULL, delim);
 		}
 		num_tokens++;
-
 		argv = malloc(sizeof(char *) * num_tokens);
 		token = strtok(lineptr_copy, delim);
 		for (i = 0; token != NULL; i++)
@@ -59,6 +56,5 @@ int main(int ac, char **argv)
 	}
 	free(lineptr_copy);
 	free(lineptr);
-
 	return (0);
 }

@@ -7,8 +7,8 @@
 char *own_getline()
 {
 	static char buffer[BUFFER_SIZE];
-	static int index = 0;
-	static int bytes_read = 0;
+	static int index;
+	static int bytes_read;
 	int start_pos;
 	int i;
 
@@ -18,33 +18,28 @@ char *own_getline()
 		index = 0;
 		if (bytes_read <= 0)
 		{
-			return NULL;
+			return (NULL);
 		}
 	}
 	start_pos = index;
-
 	while (index < bytes_read && buffer[index] != '\n')
 	{
 		index++;
 	}
 	if (index == bytes_read)
 	{
-		return NULL;
+		return (NULL);
 	}
-
 	buffer[index++] = '\0';
-
 	char *line = malloc(index - start_pos);
 
 	if (line == NULL)
 	{
-		return NULL;
+		return (NULL);
 	}
-
 	for (int i = start_pos; i < index; i++)
 	{
 		line[i - start_pos] = buffer[i];
 	}
-
-	return line;
+	return (line);
 }
