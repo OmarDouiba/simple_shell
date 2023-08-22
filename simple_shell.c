@@ -16,19 +16,18 @@ int main(int ac, char **argv)
 	int num_tokens = 0;
 	char *token;
 	int i;
-
 	(void)ac;
 
 	while (1)
 	{
 		write(1, "$ ", 2);
 		nchars_read = getline(&lineptr, &n, stdin);
-
 		if (nchars_read == -1)
 		{
 			printf("end of file\n");
 			return (-1);
 		}
+		lineptr[nchars_read - 1] = '\0';
 		lineptr_copy = malloc(sizeof(char) * nchars_read);
 		if (lineptr_copy == NULL)
 		{
