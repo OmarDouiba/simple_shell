@@ -23,8 +23,9 @@ int _execute(char *full, char **line_arr)
 		if (exec_stat == -1)
 		{
 			perror(line_arr[0]); /*Print an error message*/
+			free(line_arr), free(full);
 			/*Indicate command execution failure*/
-			exit(127);
+			exit(EXIT_FAILURE);
 		}
 	}
 	else /*Parent process*/
