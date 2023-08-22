@@ -3,7 +3,7 @@
  * *get_location - function is expected to take in the command that was
  * passed and return the path of that command
  *
- * *command: a pointer to a null-terminated string
+ * @command: a pointer to a null-terminated string
  * representing the name of a command
  *
  * Return: pointer to a char representing the location of the given command
@@ -21,8 +21,8 @@ char *get_location(char *command)
 		dup_path = strdup(path);
 		command_length = strlen(command);
 		path_token = strtok(dup_path, ":");
-	
-		while(path_token != NULL)
+
+		while (path_token != NULL)
 		{
 			directory_length = strlen(path_token);
 			file_path = malloc(command_length + directory_length + 2);
