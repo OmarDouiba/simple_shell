@@ -37,7 +37,7 @@ void execmd(char **argv)
 			else
 			{
 				do {
-					wpid = waitpid(pid, &status, WUNTRACED);
+					waitpid(pid, &status, WUNTRACED);
 				} while (!WIFEXITED(status) && !WIFSIGNALED(status));
 			}
 		}

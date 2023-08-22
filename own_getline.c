@@ -9,7 +9,6 @@ char *own_getline()
 	static char buffer[BUFFER_SIZE];
 	static int index = 0;
 	static int bytes_read = 0;
-	int start_pos = index;
 
 	if (index >= bytes_read)
 	{
@@ -31,6 +30,8 @@ char *own_getline()
 	}
 
 	buffer[index++] = '\0';
+
+	int start_pos = index;
 
 	char *line = malloc(index - start_pos);
 
