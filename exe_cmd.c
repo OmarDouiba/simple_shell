@@ -11,7 +11,7 @@
 void execmd(char **argv)
 {
 	char *command = NULL, *new_command = NULL;
-	pid_t pid, wpid;
+	pid_t pid;
 	int status;
 
 	if (argv)
