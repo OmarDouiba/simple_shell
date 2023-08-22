@@ -19,12 +19,12 @@ void execmd(char **argv)
 		command = argv[0];
 		new_command = get_location(command);
 
-		if (actual_command)
+		if (new_command)
 		{
 			pid = fork();
 			if (pid == 0)
 			{
-				if (execve(actual_command, argv, NULL) == -1)
+				if (execve(new_command, argv, NULL) == -1)
 				{
 					perror("Error");
 					exit(EXIT_FAILURE);
