@@ -22,6 +22,13 @@ Github :
 here should be one project repository per group. If you and your partner have a repository with
 the same name in both your accounts, you risk a 0% score. Add your partner as a collaborator.
 
+Copyright - Plagiarism :
+
+You are tasked to come up with solutions for the tasks below yourself to meet with the above learning objectives.
+You will not be able to meet the objectives of this or any following project by copying and pasting someone else’s work.
+You are not allowed to publish any content of this project.
+Any form of plagiarism is strictly forbidden and will result in removal from the program.
+
 tasks :
 mandatory :
 
@@ -38,7 +45,6 @@ The command lines are made only of one word. No arguments will be passed to prog
 If an executable cannot be found, print an error message and display the prompt again.
 Handle errors.
 You have to handle the “end of file” condition (Ctrl+D)
-
 You don’t have to :
 use the PATH
 implement built-ins
